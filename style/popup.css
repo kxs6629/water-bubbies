@@ -1,0 +1,33 @@
+html {
+    min-height: 5em;
+    min-width: 10em;
+    background: rgb(255, 255, 230);
+    font-family: sans-serif;
+}
+
+body{
+    display:flexbox;
+    flex-flow: column;
+    gap: 1em;
+}
+
+p{
+    font-size: large;
+}
+
+button{
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 8px;
+    display: inline-block;
+    font-size: medium;
+}
+
+#yes{
+    background-color: green;
+}
+
+#no{
+    background-color: red;
+}

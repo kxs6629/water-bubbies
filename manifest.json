@@ -1,0 +1,21 @@
+{
+    "manifest_version" : 3,
+    "name" : "Hydrate Bitch",
+    "version" : "1.0",
+    "description" : "Remind a mf to hydrate",
+    "permissions" : ["alarms","tabs","notifications"],
+    "icons" : {
+        "16" : "media/hydrate-16.png",
+        "32" : "media/hydrate-32.png",
+        "48" : "media/hydrate-48.png",
+        "128" : "media/hydrate-128.png"
+    },
+    "background" : {
+        "service_worker" : "scripts/background.js",
+        "default_popup" : "html/panel.html"
+    },
+    "action" : {
+        "default_popup": "panel.html",
+        "default_icon" : "hydrate-128.png"
+    }
+}
