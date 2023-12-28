@@ -1,15 +1,50 @@
 {
-    "hydrationFacts": {
-        "Improved brain performance":"Even mild dehydration—as little as 2% fluid loss—can affect memory, mood, concentration, and reaction time. Adding just a few glasses of water to your daily intake can have a positive effect on cognition, stabilize your emotions, and even combat feelings of anxiety. This is especially important for older adults who are at higher risk for both dehydration and impaired cognitive function.",
-        "Digestive harmony":"Your body needs water in order to digest food properly. Without enough, you may experience irregular bowel movements, gas, bloating, heartburn, and other discomforts that can hurt your quality of life. Upping your fluid intake may help get things moving in the right direction again. It aids in breaking down soluble fiber from your diet to keep your digestion process on track. Mineral water is especially beneficial—look for products enriched with sodium and magnesium.",
-        "More energy":"Dehydration can slow down circulation and affect the flow of oxygen to your brain. A lack of fluids can also cause your heart to work harder to pump oxygen all throughout your body. All of that expended energy can make you feel tired, sluggish, and less focused. Simply by drinking more H2O, you’ll prevent dehydration and have more pep to get you through the day.",
-        "Weight loss/management":"Since it provides a sense of fullness, water can help you feel satisfied in between meals—instead of heading to the snack cupboard. It can also help boost your metabolism. One study of women with excess weight found that drinking additional glasses of water before each meal resulted in substantial reductions in body weight, body mass index, and body composition. According to another 2016 study, adults who upped their water intake by just 1% consumed fewer calories. They also reduced their overall intake of sugar, cholesterol, sodium, and saturated fat.",
-        "Decreased joint pain":"Did you know the cartilage in our joints contains approximately 80% water? Staying hydrated helps your joints stay well-lubricated, which helps reduce friction by creating more of a 'cushion' between the bones. Less friction means smoother-moving joints and fewer aches and pains.",
-        "Better temperature regulation":"Research shows that when you're dehydrated, your body stores more heat. This in turn lowers your ability to tolerate hot temperatures. Drinking plenty of water helps you produce sweat when you're overheated during activity, which in turn cools your body down. This built-in cooling mechanism is critical in preventing heat stroke and other potentially deadly heat-related conditions.",
-        "Kidney stone prevention":"Kidney stones are clumps of mineral crystals that form in the urinary tract. If you've ever experienced one, you know how painful they can be. Consuming adequate amounts of water each day can help dilute the concentration of minerals in your urinary tract and make stones less likely. Water also helps flush harmful bacteria from your bladder and can aid in preventing urinary tract infections (UTIs).",
-        "Healthier heart":"Your blood is made up largely of H2O. When you don't drink enough glasses of water, it becomes concentrated, which can cause an imbalance of vital minerals (electrolytes). These minerals, like potassium and sodium, are key to the proper functioning of your heart.",
-        "Improved detoxification":"Sufficient water intake supports your body’s natural detoxification systems, which remove waste and harmful substances through urination, breathing, perspiration, and bowel movements. Supporting your own powerful, built-in detox processes can help enhance your overall health.",
-        "Fewer headaches":"Even a mild fluid loss can cause the brain to contract away from the skull, leading to headaches and migraines in some individuals. Being consistently well-hydrated may help keep head pain in check."
-    },
-    "source":"Courtesy of: https://www.ncoa.org/article/10-reasons-why-hydration-is-important"
+    "hydrationFacts": 
+        [
+            {
+            "title": "Improved brain performance",
+            "fact": "Even mild dehydration—as little as 2% fluid loss—can affect memory, mood, concentration, and reaction time. Adding just a few glasses of water to your daily intake can have a positive effect on cognition, stabilize your emotions, and even combat feelings of anxiety. This is especially important for older adults who are at higher risk for both dehydration and impaired cognitive function."
+        },
+        {
+            "title":"Digestive harmony",
+            "fact":"Your body needs water in order to digest food properly. Without enough, you may experience irregular bowel movements, gas, bloating, heartburn, and other discomforts that can hurt your quality of life. Upping your fluid intake may help get things moving in the right direction again. It aids in breaking down soluble fiber from your diet to keep your digestion process on track. Mineral water is especially beneficial—look for products enriched with sodium and magnesium."
+        },
+        {
+            "title":"More energy",
+            "fact":"Dehydration can slow down circulation and affect the flow of oxygen to your brain. A lack of fluids can also cause your heart to work harder to pump oxygen all throughout your body. All of that expended energy can make you feel tired, sluggish, and less focused. Simply by drinking more H2O, you’ll prevent dehydration and have more pep to get you through the day."
+        },
+        {
+            "title": "Weight loss/management",
+            "fact": "Since it provides a sense of fullness, water can help you feel satisfied in between meals—instead of heading to the snack cupboard. It can also help boost your metabolism. One study of women with excess weight found that drinking additional glasses of water before each meal resulted in substantial reductions in body weight, body mass index, and body composition. According to another 2016 study, adults who upped their water intake by just 1% consumed fewer calories. They also reduced their overall intake of sugar, cholesterol, sodium, and saturated fat."
+        },
+        {
+            "title": "Decreased joint pain",
+            "fact": "Did you know the cartilage in our joints contains approximately 80% water? Staying hydrated helps your joints stay well-lubricated, which helps reduce friction by creating more of a 'cushion' between the bones. Less friction means smoother-moving joints and fewer aches and pains."
+        },
+        {
+            "title": "Better temperature regulation",
+            "fact": "Research shows that when you're dehydrated, your body stores more heat. This in turn lowers your ability to tolerate hot temperatures. Drinking plenty of water helps you produce sweat when you're overheated during activity, which in turn cools your body down. This built-in cooling mechanism is critical in preventing heat stroke and other potentially deadly heat-related conditions."
+        },
+        {
+            "title": "Kidney stone prevention",
+            "fact": "Kidney stones are clumps of mineral crystals that form in the urinary tract. If you've ever experienced one, you know how painful they can be. Consuming adequate amounts of water each day can help dilute the concentration of minerals in your urinary tract and make stones less likely. Water also helps flush harmful bacteria from your bladder and can aid in preventing urinary tract infections (UTIs)."
+        },
+        {
+            "title": "Healthier heart",
+            "fact": "Your blood is made up largely of H2O. When you don't drink enough glasses of water, it becomes concentrated, which can cause an imbalance of vital minerals (electrolytes). These minerals, like potassium and sodium, are key to the proper functioning of your heart."
+
+        },
+        {
+            "title": "Improved detoxification",
+            "fact": "Sufficient water intake supports your body’s natural detoxification systems, which remove waste and harmful substances through urination, breathing, perspiration, and bowel movements. Supporting your own powerful, built-in detox processes can help enhance your overall health."
+
+        },
+        {
+            "title": "Fewer headaches",
+            "fact": "Even a mild fluid loss can cause the brain to contract away from the skull, leading to headaches and migraines in some individuals. Being consistently well-hydrated may help keep head pain in check."
+
+        }
+        
+    ],
+    "source": "Courtesy of: https://www.ncoa.org/article/10-reasons-why-hydration-is-important"
 }
