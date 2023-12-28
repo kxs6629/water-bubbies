@@ -6,12 +6,14 @@ document.getElementById("no").addEventListener("click",no);
 
 let factNum = Math.floor(Math.random() * 9);
 fetch("../scripts/hydrationFacts.json")
-    .then(response => response.json)
-    .then(document.getElementById('hydrationFactHeader').innerText());
+    .then(response => response.json())
+    .then(data => console.log(data["hydrationFacts"][factNum]))
+    .catch(error => console.error('Error: ',error));
+    // .then(document.getElementById('hydrationFactHeader').innerText = response[][]);
 
 function yes(){
-    let hydrationCount = parseInt(localStorage.getItem("hydrationCount"))+1;
-    localStorage.setItem("hydrationCount", String(hydrationCount));
+    let hCount = chrome.storage.sync.get(["hydrationCount"])+1;
+    chrome.storage.sync.set({hydrationCount: hCount});
     // show happy bottle
     image.src = "../media/uwu-128.png";
     while(buttons[0]) buttons[0].parentNode.removeChild(buttons[0]);
@@ -19,8 +21,8 @@ function yes(){
 }
 
 function no(){
-    let cactusCount = parseInt(localStorage.getItem("cactusCount"))+1;
-    localStorage.setItem("cactusCount", String(cactusCount));
+    let cCount = chrome.storage.sync.get(["cactusCount"])+1;
+    chrome.storage.sync.set({cactusCount: cCount});
     //show angry bottle
     image.src="../media/angry-128.png";
     while(buttons[0]) buttons[0].parentNode.removeChild(buttons[0]);

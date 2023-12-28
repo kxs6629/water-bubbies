@@ -11,9 +11,11 @@ chrome.runtime.onInstalled.addListener( async({reason}) => {
         periodInMinutes: 0.5
     });
 
-    localStorage.setItem("hydrationCount", "0");
-    localStorage.setItem("cactusCount","0");
-
+    chrome.storage.sync.set({
+        alarm_enabled:true,
+        hydrationCount:0,
+        cactusCount:0
+    });
 });
 
 chrome.alarms.onAlarm.addListener((alarm) =>{
@@ -23,14 +25,20 @@ chrome.alarms.onAlarm.addListener((alarm) =>{
 
 
 function notification(){
-    chrome.notifications.create(
-        {
-            title:"Hydration Check",
-            message:"Did you hydrate? Click here to submit your answer :)",
-            iconUrl: "../media/hydrate-128.png",
-            type: "basic"
-        }
-    )
+    if(chrome.storage.sync.get(["alarm_enabled"])){
+        chrome.notifications.create(
+            {
+                title:"Hydration Check",
+                message:"Did you hydrate? Click here to submit your answer :)",
+                iconUrl: "../media/hydrate-128.png",
+                type: "basic"
+            }
+        ) 
+    }
+    else{
+        console.log(chrome.storage.sync.get(["alarm_enabled"]));
+    }
+    
 };
 
 function clickNotification(){
