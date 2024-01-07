@@ -1,20 +1,35 @@
-let curState = chrome.storage.sync.get(["alarm_enabled"]);
+let curState = chrome.storage.sync.get(["alarm_enabled"]).alarm_enabled;
 let toggleButton = document.getElementById("alarmToggle");
-toggleButton.checked = curState;
+
+chrome.storage.sync.get(["alarm_enabled"]).then((res) => {
+    toggleButton.checked = res.alarm_enabled;
+    console.log(res);
+});
 
 // listener for alarm toggle
-toggleButton.addEventListener('change',function(){
+toggleButton.addEventListener('change',() =>{
     if(this.checked){
-        chrome.storage.sync.set({alarm_enabled:false});
+        chrome.storage.sync.get(["alarm_enabled"]).then((res)=>{
+            chrome.storage.sync.set({alarm_enabled: true},function(){});
+        })
     }
     else{
-        chrome.storage.sync.set({alarm_enabled:true})
+        chrome.storage.sync.get(["alarm_enabled"]).then((res)=>{
+            chrome.storage.sync.set({alarm_enabled: false},function(){});
+        })
     }
 });
 
+
 // get stored stats and display to user
-document.getElementById("counterPass").innerText = "You've hydrated "+ chrome.storage.sync.get(["hydrationCount"])+" times";
-document.getElementById("counterFail").innerText = "You were a cactus "+ chrome.storage.sync.get(["cactusCount"])+" times >:(";
+chrome.storage.sync.get(["hydrationCount"]).then((result) =>{
+    document.getElementById("counterPass").innerText = "You've hydrated "+result.hydrationCount+" times";
+});
+
+chrome.storage.sync.get(["cactusCount"]).then((result) =>{
+    document.getElementById("counterFail").innerText = "You've been a cactus "+result.cactusCount+" times";
+});
+    
+
 
 //TODO
-// Alarm toggle functionality

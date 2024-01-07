@@ -1,6 +1,6 @@
 {
     "manifest_version" : 3,
-    "name" : "Hydrate Bitch",
+    "name" : "Hydrate",
     "version" : "1.0",
     "description" : "Remind a mf to hydrate",
     "permissions" : ["alarms","tabs","notifications","storage"],
