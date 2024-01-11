@@ -2,7 +2,10 @@ html {
     min-height: 5em;
     min-width: 10em;
     background: rgb(255, 255, 230);
-    font-family: sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    /* font-family: 'Indie Flower', cursive; */
+    /* font-weight: bold; */
+    /* font-size:48px; */
 }
 
 body{
@@ -30,4 +33,14 @@ button{
 
 #no{
     background-color: red;
+}
+
+#firstFade{
+    opacity:1;
+    transition: opacity 3s;
+}
+
+#secondFade{
+    opacity: 0%;
+    transition: opacity 3s;
 }

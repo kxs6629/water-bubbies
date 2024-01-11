@@ -1,3 +1,7 @@
+html{
+    font-family: 'Indie Flower', cursive;
+}
+
 .switch {
     position: relative;
     display: inline-block;
