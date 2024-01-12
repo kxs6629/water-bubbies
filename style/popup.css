@@ -1,18 +1,17 @@
 html {
-    min-height: 5em;
-    min-width: 10em;
-    background: rgb(255, 255, 230);
+    background: #77AFB6;
     font-family: 'Josefin Sans', sans-serif;
+    color: #FFFFFF;
     /* font-family: 'Indie Flower', cursive; */
     /* font-weight: bold; */
     /* font-size:48px; */
 }
 
-body{
-    display:flexbox;
+/* body{
+    display:inline;
     flex-flow: column;
     gap: 1em;
-}
+} */
 
 p{
     font-size: large;
@@ -25,6 +24,21 @@ button{
     padding: 8px;
     display: inline-block;
     font-size: medium;
+}
+
+#firstFade{
+   /*  */
+}
+#hydrateTime{
+    font-size: 98px;
+}
+
+#hydrationFactHeader{
+    font-size: 64px;
+}
+
+#hydrationFactText{
+    font-size: 24px;
 }
 
 #yes{
