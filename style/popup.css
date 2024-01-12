@@ -1,36 +1,33 @@
 html {
     background: #77AFB6;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Comfortaa', sans-serif;
     color: #FFFFFF;
-    /* font-family: 'Indie Flower', cursive; */
-    /* font-weight: bold; */
-    /* font-size:48px; */
 }
 
-/* body{
-    display:inline;
-    flex-flow: column;
-    gap: 1em;
-} */
+body{
+    margin:0;
+}
 
 p{
     font-size: large;
 }
 
-button{
-    background-color: green;
-    border: none;
-    color: white;
-    padding: 8px;
-    display: inline-block;
-    font-size: medium;
+#firstFade{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 90vh;
 }
 
-#firstFade{
-   /*  */
-}
 #hydrateTime{
-    font-size: 98px;
+    padding-top: 10%;
+    align-self: center;
+    font-size: 96px;
+}
+
+#subText{
+    padding: 0px 25px 0px 25px;
 }
 
 #hydrationFactHeader{
@@ -41,20 +38,76 @@ button{
     font-size: 24px;
 }
 
-#yes{
-    background-color: green;
-}
-
-#no{
-    background-color: red;
-}
-
 #firstFade{
     opacity:1;
-    transition: opacity 3s;
+    animation: fadeOut 6s;
 }
 
 #secondFade{
+    font-family: 'Comfortaa', sans-serif;
     opacity: 0%;
-    transition: opacity 3s;
+    animation: fadeIn 2s;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100vh;
+}
+
+#headerText {
+    font-size: 96px;
+}
+
+
+#btnGroup{
+    width: 50%;
+    /* GOD WHY */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+img{
+    max-width: 25%;
+}
+
+button{
+    color: #FFFFFF;
+    font-size: 48px;    
+    height: 200px;
+    width: 400px;
+    border: none;
+    border-radius: 10px;
+}
+
+#yes{
+    background-color: #326E6E;
+}
+
+#no{
+    background-color: #EE254E;
+}
+
+#endText{
+    font-size: 64px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+    
 }
