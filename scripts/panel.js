@@ -1,8 +1,7 @@
 let toggleButton = document.getElementById("alarmToggle");
-let passCount = chrome.storage.sync.get(["hydrationCount"]).hydrationCount;
-let failCount = chrome.storage.sync.get(["cactusCount"]).cactusCount;
-const sum = passCount-failCount;
-;
+let passCount = 0;
+let failCount = 0;
+
 chrome.storage.sync.get(["alarm_enabled"]).then((res) => {
     toggleButton.checked = res.alarm_enabled;
     console.log(res);
@@ -17,22 +16,23 @@ toggleButton.addEventListener('change',() =>{
 
 
 // get stored stats and display to user
-// chrome.storage.sync.get(["hydrationCount"]).then((result) =>{
-//     document.getElementById("counterPass").innerText = "You've hydrated "+result.hydrationCount+" times";
-//     passCount = result.hydrationCount;
-// });
+chrome.storage.sync.get(["hydrationCount"]).then((result) =>{
+    document.getElementById("counterPass").innerText = "You've hydrated "+result.hydrationCount+" times";
+    passCount = result.hydrationCount;
+});
 
-// chrome.storage.sync.get(["cactusCount"]).then((result) =>{
-//     document.getElementById("counterFail").innerText = "You've been a cactus "+result.cactusCount+" times";
-//     failCount = result.cactusCount;
-// });
+chrome.storage.sync.get(["cactusCount"]).then((result) =>{
+    document.getElementById("counterFail").innerText = "You've been a cactus "+result.cactusCount+" times";
+    failCount = result.cactusCount;
+    statusCheck();
+});
 
-newFunction(); 
     
 
 
 
-function newFunction() {
+function statusCheck() {
+    let sum = passCount - failCount;
     const statusImg = document.getElementById("statusImg");
     const statusText = document.getElementById("statusText");
     switch (sum) {
@@ -54,5 +54,5 @@ function newFunction() {
     }
 }
 //TODO
+// Make cactus icon
 // Display whether hydrated or cactus ( what about neutral??)
-// Dude i have no idea, I think it's an async thing
