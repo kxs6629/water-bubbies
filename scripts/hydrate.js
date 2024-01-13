@@ -7,8 +7,8 @@ chrome.runtime.onInstalled.addListener( async({reason}) => {
     }
 
     await chrome.alarms.create('wawa-alarm', {
-        delayInMinutes: 0.5,
-        periodInMinutes: 0.5
+        delayInMinutes: 0.2,
+        periodInMinutes: 0.2
     });
 
 });
@@ -16,6 +16,7 @@ chrome.runtime.onInstalled.addListener( async({reason}) => {
 chrome.alarms.onAlarm.addListener((alarm) =>{
     chrome.storage.sync.get(["alarm_enabled"]).then((res)=>{
         if(res.alarm_enabled){
+            console.log("here");
             chrome.notifications.create(
                 {
                     title:"Hydration Check",
@@ -29,7 +30,6 @@ chrome.alarms.onAlarm.addListener((alarm) =>{
             console.log(res.alarm_enabled);
         }
     });
-    // notification();
     chrome.notifications.onClicked.addListener(clickNotification);
 })
 

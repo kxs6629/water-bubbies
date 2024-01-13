@@ -1,5 +1,21 @@
-html{
-    font-family: 'Indie Flower', cursive;
+body{
+    font-family: 'Comfortaa', sans-serif;
+    color: #FFFFFF;
+    background-color: #7C99BB;
+    width: 550px;
+    height:600px;
+}
+
+.headerText{
+    font-size: 36px;
+}
+
+.subHeader{
+    font-size: 32px;
+}
+
+.subText{
+    font-size: 24px;
 }
 
 .switch {

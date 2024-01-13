@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style/panel.css"> 
     <title>Settings Panel</title>
 </head>
 <body>
-    <h2>Hydration Stats</h2>
-    <p id="counterPass"></p>
-    <p id="counterFail"></p>
-    <h2>Options</h2>
-    <p>Alarm Toggle</p>
+    <p class="headerText">Hydration Stats</p>
+    <img id="statusImg">
+    <p class="subHeader" id="statusText"></p>
+    <p class="subText" id="counterPass"></p>
+    <p class="subText" id="counterFail"></p>
+    <p class="subHeader">Alarm Toggle</p>
     <label class="switch">
         <input type="checkbox" id="alarmToggle">
         <span class="slider"></span>
