@@ -1,6 +1,6 @@
 {
     "manifest_version" : 3,
-    "name" : "Hydrate",
+    "name" : "Water Bubbies",
     "version" : "1.0",
     "description" : "Remind pookie to hydrate",
     "permissions" : ["alarms","tabs","notifications","storage"],
