@@ -9,8 +9,6 @@ let factNum = Math.floor(Math.random() * 9);
 let ranFact = fetch("../scripts/hydrationFacts.json")
     .then(response => response.json())
     .then(data =>{
-        console.log(data["hydrationFacts"][factNum]);
-        // document.getElementById("hydrationFactHeader").innerText = data["hydrationFacts"][factNum]["title"]; 
         document.getElementById("hydrationFactText").innerText = data["hydrationFacts"][factNum]["fact"];
     })
     .catch(error => console.error('Error: ',error));
@@ -37,7 +35,7 @@ function yes(){
     goodP.appendChild(goodText);
     const addHere = document.getElementById("secondFade");
     addHere.appendChild(goodP);
-    // document.getElementsByTagName("p")[0].innerText = "Good :)";
+    delayClose();
 }
 
 function no(){
@@ -55,7 +53,7 @@ function no(){
     meanP.appendChild(meanText);
     const addHere = document.getElementById("secondFade");
     addHere.appendChild(meanP);
-    // document.getElementsByTagName("p")[0].innerText = "Hydrate >:(";
+    delayClose();
 }
 
 function switchContent(){
@@ -88,8 +86,6 @@ function switchContent(){
 
     secondDiv.append(p);
     secondDiv.append(img);
-    // secondDiv.append(btn1);
-    // secondDiv.append(btn2);
     btnDiv.append(btn1);
     btnDiv.append(btn2);
 
@@ -100,5 +96,10 @@ function switchContent(){
     document.getElementById("yes").addEventListener("click",yes);
     document.getElementById("no").addEventListener("click",no);
     document.getElementById("secondFade").style.opacity = 1;
+}
 
+function delayClose(){
+    setTimeout(function(){
+        window.close();
+    }, 3000);
 }

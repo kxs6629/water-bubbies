@@ -1,13 +1,29 @@
+html{
+    width: 500px;
+}
 body{
     font-family: 'Comfortaa', sans-serif;
     color: #FFFFFF;
     background-color: #7C99BB;
-    width: 550px;
-    height:600px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+img#statusImg{
+    max-width: 50%;
 }
 
 .headerText{
     font-size: 36px;
+    text-decoration: underline;
 }
 
 .subHeader{

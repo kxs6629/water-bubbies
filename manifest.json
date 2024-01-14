@@ -2,7 +2,7 @@
     "manifest_version" : 3,
     "name" : "Hydrate",
     "version" : "1.0",
-    "description" : "Remind a mf to hydrate",
+    "description" : "Remind pookie to hydrate",
     "permissions" : ["alarms","tabs","notifications","storage"],
     "icons" : {
         "16" : "media/hydrate-16.png",
