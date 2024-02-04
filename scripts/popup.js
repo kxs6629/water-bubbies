@@ -17,13 +17,19 @@ document.addEventListener("DOMContentLoaded", () => {
     window.setTimeout(function() {
         document.getElementById("firstFade").style.opacity = 0;
         switchContent();
+        // Fix the fade in and fade out for this.
+        // Currently 5 seconds is the longest it can go before it's a funky transition
     }, 5000);
 });
 
 function yes(){
     const image = document.getElementById('water_image');
+    let curDate = new Date();
     chrome.storage.sync.get(["hydrationCount"]).then((res)=>{
         chrome.storage.sync.set({hydrationCount: res.hydrationCount+1},function(){});
+    });
+    chrome.storage.sync.get(["timeSinceHydrate"]).then((res)=>{
+        chrome.storage.sync.set({timeSinceHydrate: curDate.getTime()},function(){});
     });
     // show happy bottle
     good_audio.play();
@@ -101,5 +107,5 @@ function switchContent(){
 function delayClose(){
     setTimeout(function(){
         window.close();
-    }, 3000);
+    }, 7000);
 }

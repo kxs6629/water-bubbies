@@ -14,7 +14,8 @@ chrome.runtime.onInstalled.addListener( async({reason}) => {
     chrome.storage.sync.set({
         alarm_enabled:true,
         hydrationCount:0,
-        cactusCount:0
+        cactusCount:0,
+        timeSinceHydrate:0
     });
 
 });
@@ -23,7 +24,8 @@ chrome.runtime.onStartup.addListener(function(){
     chrome.storage.sync.set({
         alarm_enabled:true,
         hydrationCount:0,
-        cactusCount:0
+        cactusCount:0,
+        timeSinceHydrate:0
     });
 })
 

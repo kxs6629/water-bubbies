@@ -44,6 +44,7 @@ p{
 }
 
 #secondFade{
+    /* Fix sizing issue as seen on bb's computer */
     font-family: 'Comfortaa', sans-serif;
     opacity: 0%;
     animation: fadeIn 2s;
@@ -94,10 +95,10 @@ button{
 }
 
 @keyframes fadeIn {
-    from {
+    50% {
         opacity: 0;
     }
-    to {
+    100% {
         opacity: 1;
     }
 }

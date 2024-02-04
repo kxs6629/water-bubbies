@@ -13,7 +13,6 @@ toggleButton.addEventListener('change',() =>{
 
 statusCheck();
 
-
 async function statusCheck() {
     const passCount = await chrome.storage.sync.get(["hydrationCount"]).then((result) =>{
         document.getElementById("counterPass").innerText = "Hydration Count: "+result.hydrationCount;
@@ -22,6 +21,12 @@ async function statusCheck() {
     const failCount = await chrome.storage.sync.get(["cactusCount"]).then((result) =>{
         document.getElementById("counterFail").innerText = "Cactus Count: "+result.cactusCount;
         return result.cactusCount;
+    });
+    const timeCheck = await chrome.storage.sync.get(["timeSinceHydrate"]).then((result) =>{
+        //Format time to be HH:MM to user
+        //Currently has milliseconds since 1970... 
+        document.getElementById("timeCheck").innerText = "Last response recorded at: "+result.timeSinceHydrate;
+        return result.timeSinceHydrate;
     });
 
     const sum = await passCount-failCount;
@@ -38,7 +43,7 @@ function populateImage(sum){;
     } else if(sum < 0){
         statusImg.setAttribute("src", "../media/cactus.png");
         statusImg.setAttribute("alt", "cactus_image");
-        statusText.innerText = "You're a currently a cactus.";
+        statusText.innerText = "You're currently a cactus.";
     } else if (sum == 0){
         statusImg.setAttribute("src", "../media/hydrate.png");
         statusImg.setAttribute("alt", "neutral_image");
